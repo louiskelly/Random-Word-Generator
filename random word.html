@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	
+	body{
+		background-color: #333333;
+		text-align: center;
+	}
+
+	h1{
+		margin-top: 230px;
+		font-family: sans-serif;
+		font-size: 100px;
+		color: lightgrey;
+	}
+
+	button{
+		border: none;
+		background-color: lightgrey;
+		border-radius: 45px;
+		padding: 20px 50px;
+		font-size: 30px;
+		color: #333333;
+		cursor: pointer;
+		font-weight: bolder;
+	}
+
+
+	</style>
+</head>
+<body>
+	
+	<h1 id="banana"></h1>
+	<button>RANDOMIZE WORD</button>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+
+	function bananana(){
+		var vowels = ['a','e','i','o','u']
+		var cons = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+
+		var l1 = cons[Math.floor(Math.random()*cons.length)];
+		var l2 = vowels[Math.floor(Math.random()*vowels.length)];
+		var l3 = cons[Math.floor(Math.random()*cons.length)];
+		var l4 = cons[Math.floor(Math.random()*cons.length)];
+		var l5 = vowels[Math.floor(Math.random()*vowels.length)];
+		var l6 = cons[Math.floor(Math.random()*cons.length)];
+
+		$('h1').text(l1+l2+l3+l4+l5+l6);
+	};
+
+	$('button').click(function(){
+		bananana();	
+	});
+	bananana();	
+
+	</script>
+
+</body>
+</html>
